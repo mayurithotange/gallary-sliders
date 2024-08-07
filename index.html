@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>gallaray</title>
+</head>
+<body>
+    <h1>sandals sliders</h1>
+    <div class="img-continer">
+     
+    <img src="gallary/back.jpg" alt=""   class="btn " id="left"   onclick="next()">
+           
+           
+    <img src="gallary/image5.jpg" alt="" class="img" id="img">
+    
+    <img src="gallary/nextbtn.jpg" alt=""  class="btn "  id="right"  onclick="back()">
+    </div>
+
+ 
+
+    <script>
+        const gallary = [
+      "gallary/img1.jpeg",
+      "gallary/imges3.jpg",
+      "gallary/image2.jpeg",
+      "gallary/image5.jpg",
+
+        ];
+
+        let imgIndex = 0;
+        const img = document.getElementById("img")
+
+function back(){
+    if(imgIndex==0){
+        imgIndex = gallary.length -1 ;
+        
+    }
+    else
+    {
+        imgIndex--;
+    }
+   
+    img.src = gallary[imgIndex]
+}
+
+
+function next(){
+    if(imgIndex==gallary.length-1){
+        imgIndex = 0;
+    }
+    else{
+        imgIndex++;
+    }
+    img.src = gallary[imgIndex]
+}
+
+
+    </script>
+</body>
+</html>
